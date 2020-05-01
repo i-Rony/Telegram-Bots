@@ -1,7 +1,8 @@
+require('dotenv').config();
 const Telegraf = require('telegraf');
-const bot = new Telegraf('1102829364:AAFK9Lqi0Y-figGRVRPVgVacaloF5ejQ1tY'); //Get your own token by accessing BotFather in Telegram
+const bot = new Telegraf(process.env.TOKEN); //Get your own token by accessing BotFather in Telegram
 const axios = require('axios');
-const apikey = "28323538140bbb8b743542050bf6b093d510ca783f7c63e28f16235e6dea979d"; //Go to https://min-api.cryptocompare.com/ and create yoour own API key
+const apikey = process.env.YOURAPIKEY; //Go to https://min-api.cryptocompare.com/ and create yoour own API key
 
 bot.command('start', ctx => {
     sendStartMessage(ctx);

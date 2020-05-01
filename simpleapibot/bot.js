@@ -1,5 +1,6 @@
+require('dotenv').config();
 const Telegraf = require('telegraf');
-const bot = new Telegraf('1050900309:AAH5Gmu9I_mu9cy_9Cg5dh8GLxRs3R5j1AQ'); ////Get your own token by accesing BotFather in Telegram
+const bot = new Telegraf(process.env.TOKEN); ////Get your own token by accesing BotFather in Telegram
 const axios = require('axios');
 const fs = require('fs');
 
